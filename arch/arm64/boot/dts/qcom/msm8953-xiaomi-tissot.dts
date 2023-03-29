@@ -224,7 +224,3 @@
 
 	status = "okay";
 };
-
-&panel {
-	compatible = "xiaomi,tissot-panel";
-};
