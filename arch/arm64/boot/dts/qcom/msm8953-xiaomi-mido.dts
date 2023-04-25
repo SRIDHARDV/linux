@@ -94,7 +94,7 @@
 };
 
 &panel {
-	compatible = "xiaomi,mido-panel";
+	compatible = "xiaomi,otm1911";
 };
 
 &sdhc_2 {
