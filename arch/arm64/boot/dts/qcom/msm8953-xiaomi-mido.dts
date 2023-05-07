@@ -14,6 +14,7 @@
 	aliases {
 		mmc0 = &sdhc_1;
 		mmc1 = &sdhc_2;
+		serial0 = &uart_0;
 	};
 
 	speaker_amp: audio-amplifier {
@@ -27,6 +28,8 @@
 		#address-cells = <2>;
 		#size-cells = <2>;
 		ranges;
+
+		stdout-path = "serial0:115200n8";
 
 		framebuffer@90001000 {
 			compatible = "simple-framebuffer";
@@ -145,4 +148,11 @@
 	vddrfa-supply = <&pm8953_l19>;
 	vddpa-supply = <&pm8953_l9>;
 	vdddig-supply = <&pm8953_l5>;
+};
+
+&uart_0 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart_console_active>;
+
+	status = "okay";
 };
