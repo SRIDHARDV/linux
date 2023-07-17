@@ -128,19 +128,6 @@
 	vdddig-supply = <&pm8953_l5>;
 };
 
-&wcnss {
-	status = "okay";
-
-	vddpx-supply = <&pm8953_l5>;
-};
-
-&wcnss_iris {
-	vddxo-supply = <&pm8953_l7>;
-	vddrfa-supply = <&pm8953_l19>;
-	vddpa-supply = <&pm8953_l9>;
-	vdddig-supply = <&pm8953_l5>;
-};
-
 &uart_0 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart_console_active>;
